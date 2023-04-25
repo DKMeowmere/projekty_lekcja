@@ -1,15 +1,24 @@
 #include <iostream>
 using namespace std;
-
-int main()
-{
-  int age;
-   cout << "Podaj wiek, a ja ci powiem czy jestes stary" << endl;
-  cin >> age; 
-  if(!age) cout << "musisz podac liczbe" << endl;
-  else if(age < 50) cout << "jestes mlody" << endl;
-  else if(age == 50) cout << "jestes prawie stary" << endl;
-  else if(age > 50) cout << "jestes stary" << endl;
-
+int main(){
+  char literka;
+  cin>>literka;
+  if(int(literka)>=65 && int(literka)<=122)
+  {
+    if(int(literka)>=65 && int(literka)<=90)
+    {
+      cout<<"podałes dużą literke";
+    }
+    else if(int(literka)>=97 && int(literka)<=122)
+    {
+      cout<<"podałes małą literke";
+    }
+    else{
+    cout<<"podałes zła wartosc";
+  }
+  }
+  else{
+    cout<<"podałes zła wartosc";
+  }
   return 0;
 }
