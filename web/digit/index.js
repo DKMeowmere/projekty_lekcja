@@ -7,8 +7,8 @@ for (let i = 1000; i < 10000; i++) {
 	const set = new Set()
 	const str = i.toString()
 
-	for (let i = 0; i < str.length; i++) {
-		set.add(str[i])
+	for (let j = 0; j < str.length; j++) {
+		set.add(str[j])
 	}
 
 	if (set.size < 3) {
