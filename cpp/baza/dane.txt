@@ -1,0 +1,8 @@
+2 TYMEK BOCZEK 16 55
+7 bob bob 34 54
+5 rafal burian 34 21
+4 add dl 32 54
+0 jan kowalski 23 44
+6 imie nazwisko 54 39
+1 twoja stara 26 64
+8 x x 4 
