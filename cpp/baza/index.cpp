@@ -24,6 +24,17 @@ void wypisz(Osoba *osoby, int dlugosc)
   }
 }
 
+void wypiszJednaOsobe(Osoba osoba)
+{
+
+  cout << "Id:" << osoba.id << endl;
+  cout << "Imie:" << osoba.imie << endl;
+  cout << "Nazwisko:" << osoba.nazwisko << endl;
+  cout << "Wiek:" << osoba.wiek << endl;
+  cout << "Number buta:" << osoba.numerButa << endl;
+  cout << "==========" << endl;
+}
+
 int wczytajDlugosc()
 {
   fstream plik;
@@ -41,6 +52,11 @@ int wczytajDlugosc()
   else
   {
     cout << "Blad";
+  }
+
+  if (temp == "")
+  {
+    return 0;
   }
 
   plik.close();
@@ -126,17 +142,8 @@ bool porownajNapisy(string napis1, string napis2)
 
   while (napis1[i] != '\0' && napis2[i] != '\0')
   {
-    numerZnaku1 = int(napis1[i]);
-    numerZnaku2 = int(napis2[i]);
-    // zmienia male litery na duze
-    if (numerZnaku1 > 96 && numerZnaku1 < 123)
-    {
-      numerZnaku1 -= 22;
-    }
-    if (numerZnaku2 > 96 && numerZnaku2 < 123)
-    {
-      numerZnaku2 -= 22;
-    }
+    numerZnaku1 = int(tolower(napis1[i]));
+    numerZnaku2 = int(tolower(napis2[i]));
 
     if (numerZnaku1 < numerZnaku2)
     {
@@ -268,6 +275,93 @@ void sortuj()
   zapisz(osoby, dlugosc);
 }
 
+void przeszukaj()
+{
+  int dlugosc = wczytajDlugosc();
+  Osoba *osoby = new Osoba[dlugosc];
+  wczytaj(osoby);
+  char rodzajPrzeszukiwania;
+  bool czyZnalazl = false;
+
+  cout << "wpisz w jesli chcesz przeszukac po wieku, b jesli po numerze buta, i jesli po imieniu, n jesli po nazwisku" << endl;
+  cin >> rodzajPrzeszukiwania;
+
+  if (rodzajPrzeszukiwania == 'i' || rodzajPrzeszukiwania == 'n')
+  {
+    string wartosc;
+    cout << "Podaj wartośc do porówania" << endl;
+    cin >> wartosc;
+
+    if (rodzajPrzeszukiwania == 'i')
+    {
+      for (int i = 0; i < dlugosc; i++)
+      {
+        if (wartosc == osoby[i].imie)
+        {
+          wypiszJednaOsobe(osoby[i]);
+          czyZnalazl = true;
+        }
+      }
+    }
+    else if (rodzajPrzeszukiwania == 'n')
+    {
+      for (int i = 0; i < dlugosc; i++)
+      {
+        if (wartosc == osoby[i].nazwisko)
+        {
+          wypiszJednaOsobe(osoby[i]);
+          czyZnalazl = true;
+        }
+      }
+    }
+    else
+    {
+      cout << "Bledna operacja" << endl;
+      return;
+    }
+
+    if (czyZnalazl == false)
+    {
+      cout << "Nie znaleziono" << endl;
+    }
+  }
+  else
+  {
+    int wartosc;
+    cout << "Podaj wartośc do porówania" << endl;
+
+    cin >> wartosc;
+
+    if (rodzajPrzeszukiwania == 'w')
+    {
+      for (int i = 0; i < dlugosc; i++)
+      {
+        if (wartosc == osoby[i].wiek)
+        {
+          wypiszJednaOsobe(osoby[i]);
+          czyZnalazl = true;
+        }
+      }
+    }
+    else if (rodzajPrzeszukiwania == 'b')
+    {
+      for (int i = 0; i < dlugosc; i++)
+      {
+        if (wartosc == osoby[i].numerButa)
+        {
+          wypiszJednaOsobe(osoby[i]);
+          czyZnalazl = true;
+        }
+      }
+    }
+    if (czyZnalazl == false)
+    {
+      cout << "Nie znaleziono" << endl;
+      return;
+    }
+  }
+}
+
 void dodajOsobe()
 {
   int dlugosc = wczytajDlugosc();
@@ -359,7 +453,7 @@ void usunOsobe()
 
 int main()
 {
-  cout << "Kliknij d jesli chcesz dodac osobe, m jesli chcesz zmodyfikowac, u jesli chcesz usunac, s jesli chcesz posortowac:" << endl;
+  cout << "Kliknij d jesli chcesz dodac osobe, m jesli chcesz zmodyfikowac, u jesli chcesz usunac, s jesli chcesz posortowac, p jesli chcesz przeszukac baze:" << endl;
   char operacja;
   cin >> operacja;
 
@@ -378,6 +472,10 @@ int main()
   else if (operacja == 's')
   {
     sortuj();
+  }
+  else if (operacja == 'p')
+  {
+    przeszukaj();
   }
   else
   {

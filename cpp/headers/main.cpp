@@ -5,6 +5,6 @@ using namespace std;
 
 int main()
 {
-  cout << operacje::dodaj(4, 5);
+  cout << dodaj(4, 5);
   return 0;
 }

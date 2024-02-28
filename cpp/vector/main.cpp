@@ -1,44 +1,29 @@
 #include <iostream>
-// Dołączenie do programu zasobów zbioru nagłówkowego vector:
 #include <vector>
+#include "maxMin.h"
 using namespace std;
+
 int main()
 {
-    // Deklaracja i inicjalizacja (w stylu C++11) wektora o nazwie wektor:
+  int rozmiar = 10;
+  int tablicaStatyczna[rozmiar];
+  int *tablicaDynamiczna = new int[rozmiar];
+  vector<int> wektor;
 
-    vector<int> wektor = {10, 20, 30, 40, 50};
-    /* UWAGA
-     * Wektor należący do typu vector zawiera elementy składowe typu int.
-     * Początkowa liczba elementów (rozmiar) wektora wynosi 5.
-     */
-    // Wyświetlenie zawartości wektora:
-    for (int i = 0; i < wektor.size(); i++)
-    {
-        cout << "wektor[" << i << "] = " << wektor[i] << endl;
-    }
-    // Dopisanie nowego elementu z zadaną wartością na końcu wektora:
-    wektor.push_back(60);
-    cout << "Ostatni element (dopisany): " << wektor[wektor.size() - 1] << endl;
-    // Wstawienie nowego elementu o wartości 0 przed pierwszym elementem:
-    wektor.insert(wektor.begin(), 0);
-    cout << "Pierwszy element (dopisany): " << wektor[0] << endl;
-    // Wyświetlenie bieżącej zawartości wektora:
-    for (int i = 0; i < wektor.size(); i++)
-    {
-        cout << "wektor[" << i << "] = " << wektor[i] << endl;
-    } 
-    cout<<endl<<endl;
-    cout<<wektor.size()<<endl;//wyswietla ile elementóów ma wektor
-    cout<<wektor.capacity()<<endl;//wyświetla ile pamieci zajmuje wskażnik do wektora
-    // wektor.resize(5);//zmieniamy rozmiar wyrzucając z końca i robiąc wolne miejsca na koncu
-    // wektor.insert(wektor.begin() + 1, 1);//wstawiamy na pierwsze miejsce po zerowym.
-    // wektor.erase(wektor.begin() + 1);//usuwamu pierwszy element po zerowym
-    //  wektor.erase(wektor.begin() + 1,wektor.end());//usuwamy przedzial elementów od drugiego do konca
-    //  for (int i = 0; i < wektor.size(); i++)
-    // {
-    //     cout << "wektor[" << i << "] = " << wektor[i] << endl;
-    // }
-    // cout << *wektor.begin() << endl;
-    // wektor.insert(wektor.begin() + 1, 1);
-    return 0;
+  // wypelnij(tablicaStatyczna, rozmiar);
+  wypelnij(tablicaDynamiczna, rozmiar);
+  wypelnijWektor(wektor, rozmiar);
+
+  // cout << "Tablica statyczna" << endl;
+  // wypisz(tablicaStatyczna, rozmiar);
+  cout << "Tablica dynamiczna" << endl;
+  wypisz(tablicaDynamiczna, rozmiar);
+  cout << "min:" << min(tablicaDynamiczna, rozmiar) << endl;
+  cout << "max:" << max(tablicaDynamiczna, rozmiar) << endl;
+  cout << "Wektor" << endl;
+  wypiszWektor(wektor);
+  cout << "min:" << minWektor(wektor) << endl;
+  cout << "max:" << maxWektor(wektor) << endl;
+
+  return 0;
 }

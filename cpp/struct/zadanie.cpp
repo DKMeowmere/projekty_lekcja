@@ -1,45 +1,61 @@
 #include <iostream>
 using namespace std;
 
-struct Kalendarz
+struct Jednostki
 {
-  int lata;
-  int miesiace;
-  int dni;
+  int litry;
+  int galony;
+  int wanny;
+  int cysterny;
 };
-void oblicz(Kalendarz &kalendarz, int wartosc)
+
+void oblicz(Jednostki &jednostki, int wartosc)
 {
-  kalendarz.dni += wartosc;
-  int miesiace = kalendarz.dni / 30;
-  if (kalendarz.dni > 29)
+  jednostki.litry += wartosc;
+  int galony = jednostki.litry / 5;
+  if (jednostki.litry > 4)
   {
-    kalendarz.miesiace += miesiace;
-    kalendarz.dni -= miesiace * 30;
+    jednostki.galony += galony;
+    jednostki.litry -= galony * 5;
   }
-  int lata = kalendarz.miesiace / 12;
-  if (kalendarz.miesiace > 11)
+
+  int wanny = jednostki.galony / 40;
+  if (jednostki.galony > 39)
   {
-    kalendarz.lata += lata;
-    kalendarz.miesiace -= lata * 12;
+    jednostki.wanny += wanny;
+    jednostki.galony -= wanny * 40;
+  }
+
+  int cysterny = jednostki.wanny / 5;
+  if (jednostki.wanny > 4)
+  {
+    jednostki.cysterny += cysterny;
+    jednostki.wanny -= cysterny * 5;
   }
 }
 
-void wypisz(Kalendarz kalendarz)
+void wypisz(Jednostki jednostki)
 {
-  cout << "lata:" << kalendarz.lata << endl;
-  cout << "miesiace:" << kalendarz.miesiace << endl;
-  cout << "dni:" << kalendarz.dni << endl;
+  cout << "litry:" << jednostki.litry << endl;
+  cout << "galony:" << jednostki.galony << endl;
+  cout << "wanny:" << jednostki.wanny << endl;
+  cout << "cysterny:" << jednostki.cysterny << endl;
 }
 
 int main()
 {
-  Kalendarz kalendarz;
-  kalendarz.lata = 2007;
-  kalendarz.miesiace = 3;
-  kalendarz.dni = 0;
+  cout << "Podaj liczbe litrów, a ja znormalizuje jednostki i je wypisze" << endl;
+  int wartosc;
+  cin >> wartosc;
 
-  oblicz(kalendarz, 1100);
-  wypisz(kalendarz);
+  Jednostki jednostki;
+  jednostki.litry = 0;
+  jednostki.galony = 0;
+  jednostki.wanny = 0;
+  jednostki.cysterny = 0;
+
+  oblicz(jednostki, wartosc);
+  wypisz(jedno stki);
 
   return 0;
 }
