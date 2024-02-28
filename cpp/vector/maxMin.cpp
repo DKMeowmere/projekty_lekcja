@@ -9,6 +9,14 @@ int wylosujLiczbe()
   return liczba;
 }
 
+void wypiszStatycznie(int tablica[], int rozmiar)
+{
+  for (int i = 0; i < rozmiar; i++)
+  {
+    cout << tablica[i] << endl;
+  }
+}
+
 void wypisz(int *tablica, int rozmiar)
 {
   for (int i = 0; i < rozmiar; i++)
@@ -17,11 +25,19 @@ void wypisz(int *tablica, int rozmiar)
   }
 }
 
-void wypiszWektor(vector<int> wektor)
+void wypiszWektor(vector<int> &wektor)
 {
   for (int i = 0; i < wektor.size(); i++)
   {
     cout << wektor[i] << endl;
+  }
+}
+
+void wypelnijStatycznie(int tablica[], int rozmiar)
+{
+  for (int i = 0; i < rozmiar; i++)
+  {
+    tablica[i] = wylosujLiczbe();
   }
 }
 
@@ -33,15 +49,15 @@ void wypelnij(int *tablica, int rozmiar)
   }
 }
 
-void wypelnijWektor(vector<int> wektor, int rozmiar)
+void wypelnijWektor(vector<int> &wektor, int rozmiar)
 {
   for (int i = 0; i < rozmiar; i++)
   {
-    wektor[i] = wylosujLiczbe();
+    wektor.push_back(wylosujLiczbe());
   }
 }
 
-int max(int tablica[], int rozmiar)
+int maxStatycznie(int tablica[], int rozmiar)
 {
   int maxNum = tablica[0];
 
@@ -56,9 +72,24 @@ int max(int tablica[], int rozmiar)
   return maxNum;
 }
 
-int maxWektor(vector<int> wektor)
+int max(int *tablica, int rozmiar)
 {
-  int maxNum = wektor[0];
+  int maxNum = tablica[0];
+
+  for (int i = 1; i < rozmiar; i++)
+  {
+    if (maxNum < tablica[i])
+    {
+      maxNum = tablica[i];
+    }
+  }
+
+  return maxNum;
+}
+
+int maxWektor(vector<int> &wektor)
+{
+  int maxNum = wektor[0];    
 
   for (int i = 1; i < wektor.size(); i++)
   {
@@ -71,7 +102,7 @@ int maxWektor(vector<int> wektor)
   return maxNum;
 }
 
-int min(int tablica[], int rozmiar)
+int minStatycznie(int tablica[], int rozmiar)
 {
   int minNum = tablica[0];
 
@@ -86,7 +117,22 @@ int min(int tablica[], int rozmiar)
   return minNum;
 }
 
-int minWektor(vector<int> wektor)
+int min(int *tablica, int rozmiar)
+{
+  int minNum = tablica[0];
+
+  for (int i = 1; i < rozmiar; i++)
+  {
+    if (minNum > tablica[i])
+    {
+      minNum = tablica[i];
+    }
+  }
+
+  return minNum;
+}
+
+int minWektor(vector<int> &wektor)
 {
   int minNum = wektor[0];
 

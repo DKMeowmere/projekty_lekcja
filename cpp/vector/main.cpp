@@ -10,12 +10,14 @@ int main()
   int *tablicaDynamiczna = new int[rozmiar];
   vector<int> wektor;
 
-  // wypelnij(tablicaStatyczna, rozmiar);
+  wypelnijStatycznie(tablicaStatyczna, rozmiar);
   wypelnij(tablicaDynamiczna, rozmiar);
   wypelnijWektor(wektor, rozmiar);
 
-  // cout << "Tablica statyczna" << endl;
-  // wypisz(tablicaStatyczna, rozmiar);
+  cout << "Tablica statyczna" << endl;
+  wypiszStatycznie(tablicaStatyczna, rozmiar);
+  minStatycznie(tablicaStatyczna, rozmiar);
+  maxStatycznie(tablicaStatyczna, rozmiar);
   cout << "Tablica dynamiczna" << endl;
   wypisz(tablicaDynamiczna, rozmiar);
   cout << "min:" << min(tablicaDynamiczna, rozmiar) << endl;
