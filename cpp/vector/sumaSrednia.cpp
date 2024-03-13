@@ -31,7 +31,7 @@ double srednia(vector<int> &wektor)
   return (double)getSum(wektor) / wektor.size();
 }
 
- void wypelnij(vector<int> &wektor)
+void wypelnij(vector<int> &wektor)
 {
   bool czyPetlaDziala = true;
 
