@@ -24,7 +24,8 @@ int main()
   // Deklaracja C-napisu wersja3:
   char wersja3[15];
   cout << "Podaj alternatywną nazwę Visual C++ 2015 (Visual C++ 14.0): ";
-  // // Opróżnienie strumienia wejściowego:
+  // Opróżnienie strumienia wejściowego:
+  // cin.ignore(numeric_limits<std::streamsize>::max(), '\n'); // pomija maxymalną dopuszczalną długość cstringa.
   cin.ignore(numeric_limits<std::streamsize>::max(), '\n'); // pomija maxymalną dopuszczalną długość cstringa.
   // Wprowadzenie wartości zmiennej wersja3 z klawiatury:
   cin.getline(wersja3, 15); // pozwala pobrać napis ze spacjom.
