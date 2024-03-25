@@ -57,8 +57,11 @@ int main()
     strcat(napis2, napis);//"C++, Java"
     strcat(napis2, ", ");
     strchr(napis1,' '); //" JavaScript, C#"
+    cout << napis1 << endl;
     char *napis3=strchr(strchr(napis1,' '),',');//", C#"
     strcat(napis2, napis3);
     cout << napis2 << endl;
+    cout << *strchr(napis2, 'J') << endl;
+    cout << strlen(napis2) << endl;
     return 0;
 }
