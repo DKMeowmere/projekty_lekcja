@@ -40,7 +40,7 @@ public:
   }
 };
 
-Samochod pobierzDane(Samochod *s)
+Samochod* pobierzDane(Samochod *s)
 {
   string marka, model, numerRejestracyjny;
   int rokProdukcji;
@@ -63,7 +63,7 @@ Samochod pobierzDane(Samochod *s)
   s->numerRejestracyjny = numerRejestracyjny;
   s->rokProdukcji = rokProdukcji;
 
-  return *s;
+  return s;
 }
 
 void wypiszDane(Samochod *s)
@@ -93,16 +93,13 @@ int main()
 {
 
   Samochod samochod1;
-  samochod1 = pobierzDane(&samochod1);
+  pobierzDane(&samochod1);
+
+  Samochod *samochod2 = new Samochod;
+  samochod2 = pobierzDane(samochod2);
 
 
-  Samochod samochod2;
-  samochod2 = pobierzDane(&samochod2);
-  // Samochod *samochod2;
-  // samochod2 = new Samochod();
-  // samochod2 = pobierzDane(samochod2);
-
-  ktoryDrozszy(&samochod1, &samochod2);
+  ktoryDrozszy(&samochod1, samochod2);
 
   // delete samochod2;
 }

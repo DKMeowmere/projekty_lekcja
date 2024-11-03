@@ -11,7 +11,7 @@ cout << "Nazwisko: " << nazwisko << endl;
 }
 };
 // Prototypy funkcji zewnętrznych:
-Pracownik *pobierzDane(Pracownik*);
+Pracownik* pobierzDane(Pracownik*);
 void wyswietlDane(const Pracownik*);
 // PROGRAM GŁÓWNY
 int main() {
