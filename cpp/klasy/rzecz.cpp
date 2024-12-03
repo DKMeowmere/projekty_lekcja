@@ -24,6 +24,18 @@ public:
         nazwa = rzecz.nazwa;
     }
 };
+
+// class Osoba {
+// public:
+//     const int wiek;
+//     const int wzrost;
+//     string imie;
+    
+//     Osoba(int WIEK, int WZROST, string IMIE) : wiek(WIEK), wzrost(WZROST) {
+//         this->imie = IMIE;
+//     }
+// };
+
 Rzecz::Rzecz() : waga{0.2}, nazwa{"recznik"} {};
 int main()
 {

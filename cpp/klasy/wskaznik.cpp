@@ -15,13 +15,13 @@ Pracownik* pobierzDane(Pracownik*);
 void wyswietlDane(const Pracownik*);
 // PROGRAM GŁÓWNY
 int main() {
-// Utworzenie obiektu wskazywanego przez wskaźnik w_pracownik jako instancji klasy Pracownik:
+// Utworzenie obiektu  przez wskaźnik w_pracownik jako instancji klasy Pracownik:
 Pracownik *w_pracownik = new Pracownik();
 // Pobranie danych pracownika z klawiatury:
 w_pracownik = pobierzDane(w_pracownik);
 // Prezentacja danych pracownika na ekranie monitora:
 wyswietlDane(w_pracownik);
-// Usunięcie obiektu wskazywanego przez wskaźnik w_pracownik:
+// Usunięcie obiektu wskazywawskazywanegonego przez wskaźnik w_pracownik:
 delete w_pracownik;
 return 0;
 }
