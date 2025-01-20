@@ -1,0 +1,3 @@
+// Grupa A Napisz program, w którym zdefiniujesz szablon przy użyciu dwóch zmiennych uogólnionych. Napisz szablony specjalizacyjne dla zmiennych float,int oraz double,float. Uruchom napisane szablony specjalizujące w sposób jawny. Sproboj tak je napisać by dało się je uruchomić niejawnie. 
+
+// Grupa B Napisz program, w którym zdefiniujesz szablon przy użyciu dwóch zmiennych uogólnionych który pobiera jeden argument. Napisz szablony specjalizacyjne dla zmiennych float,int (ma powiekszyć argument o jeden) oraz double,float  (ma powiekszyć argument o dwa). Uruchom napisane szablony specjalizujące w sposób jawny. 
