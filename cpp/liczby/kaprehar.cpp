@@ -54,14 +54,55 @@ void sortujOdwrotnie(int *tablica)
   }
 }
 
-int kaprehar()
+int tablicaNaLiczbe(int *tablica)
 {
+  int liczba;
+
+  liczba += tablica[3];
+  liczba += tablica[2] * 10;
+  liczba += tablica[1] * 100;
+  liczba += tablica[0] * 1000;
+
+  return liczba;
 }
+
+void liczbaNaTablice(int *tablica, int liczba)
+{
+  tablica[3] = liczba % 10;
+  liczba /= 10;
+  tablica[2] = liczba % 10;
+  liczba /= 10;
+  tablica[1] = liczba % 10;
+  liczba /= 10;
+  tablica[0] = liczba;
+}
+
+int kaprehar(int liczba)
+{
+  int liczbaIteracji;
+
+  while (liczba != 6174)
+  {
+    liczbaIteracji++;
+    int wiekszaTablica[4];
+    liczbaNaTablice(wiekszaTablica, liczba);
+    sortujOdwrotnie(wiekszaTablica);
+    int wiekszaLiczba = tablicaNaLiczbe(wiekszaTablica);
+
+    int mniejszaTablica[4];
+    liczbaNaTablice(mniejszaTablica, liczba);
+    sortuj(mniejszaTablica);
+    int mniejszaLiczba = tablicaNaLiczbe(mniejszaTablica);
+
+    liczba = wiekszaLiczba - mniejszaLiczba;
+  }
+
+  return liczbaIteracji;
+};
 
 int main()
 {
-  int liczba = wylosuj();
-  int tablica[4] = {2, 4, 5, 3};
-  sortujOdwrotnie(tablica);
-  wypisz(tablica);
+  int liczba = 1234;
+
+  cout << kaprehar(liczba) << endl;
 }
