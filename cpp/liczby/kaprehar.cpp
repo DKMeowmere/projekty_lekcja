@@ -56,7 +56,7 @@ void sortujOdwrotnie(int *tablica)
 
 int tablicaNaLiczbe(int *tablica)
 {
-  int liczba;
+  int liczba = 0;
 
   liczba += tablica[3];
   liczba += tablica[2] * 10;
@@ -102,7 +102,9 @@ int kaprehar(int liczba)
 
 int main()
 {
-  int liczba = 1234;
+  int liczba = 9258;
+  int tablica[4]{3,5,7,3};
 
+  cout << tablicaNaLiczbe(tablica) << endl;
   cout << kaprehar(liczba) << endl;
 }
