@@ -1,69 +1,79 @@
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
 class Urzadzenie
 {
-  void komunikat(string napis)
+private:
+public:
+  void display(string komunikat)
   {
-    cout << napis;
+    cout << komunikat << endl;
   }
 };
 
-class Odkurzacz : Urzadzenie
+class Pralka : public Urzadzenie
 {
 private:
-  bool stanOdkurzacza = false;
+  int programPrania = 0;
+
+public:
+  void setProgramPrania(int nrPrania)
+  {
+    if (nrPrania >= 1 && nrPrania <= 12)
+    {
+      cout << "program zostal ustawiony" << endl;
+      programPrania = nrPrania;
+    }
+    else
+    {
+      cout << "podano niepoprawny numer programu" << endl;
+      programPrania = 0;
+    }
+  }
+  int getProgramPrania()
+  {
+    return programPrania;
+  }
+};
+
+class Odkurzacz : public Urzadzenie
+{
+private:
+  bool stan = false;
 
 public:
   void on()
   {
-    if (stanOdkurzacza == false)
+    if (stan == false)
     {
-      cout << "Odkurzacz wlaczono" << endl;
-      stanOdkurzacza = true;
+      stan = true;
+      display("odkurzacz wlaczono");
     }
   }
-
   void off()
   {
-    if (stanOdkurzacza == true)
+    if (stan == true)
     {
-      cout << "Odkurzacz wylaczono" << endl;
-      stanOdkurzacza = false;
+      stan = false;
+      display("odkurzacz wylaczono");
     }
-  }
-};
-
-class Pralka  : Urzadzenie
-{
-private:
-  int numerPrania = 0;
-
-public:
-//edit
-  int ustawNumerPrania(int numer)
-  {
-    if (numer > 0 && numer < 13)
-    {
-      numerPrania = numer;
-    }
-
-    return numerPrania;
   }
 };
 
 int main()
 {
   Pralka pralka;
-  pralka.ustawNumerPrania(2);
-  pralka.ustawNumerPrania(14);
+  int nr = 0;
+  cout << "podaj nr Prania 1...12" << endl;
+  cin >> nr;
+  pralka.setProgramPrania(nr);
+  cout << pralka.getProgramPrania() << endl;
 
   Odkurzacz odkurzacz;
-  odkurzacz.on();
-  odkurzacz.on();
-  odkurzacz.on();
   odkurzacz.off();
-
-  return 0;
+  odkurzacz.on();
+  odkurzacz.on();
+  odkurzacz.on();
+  odkurzacz.display("Odkurzacz wyladowal sie");
+  odkurzacz.off();
 }
