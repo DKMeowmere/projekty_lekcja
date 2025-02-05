@@ -1,7 +1,7 @@
 #include <iostream>
-#include <cmath>
-#include <vector>
+
 using namespace std;
+
 void wylosuj(int *tab)
 {
   srand(time(NULL));
@@ -12,6 +12,7 @@ void wylosuj(int *tab)
   }
   cout << endl;
 }
+
 int indeks(int *tab, int x)
 {
   tab[50] = x;
@@ -24,6 +25,7 @@ int indeks(int *tab, int x)
   }
   return 50;
 }
+
 int main()
 {
   int tab[50];
