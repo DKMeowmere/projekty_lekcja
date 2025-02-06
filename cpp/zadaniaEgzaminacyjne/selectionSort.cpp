@@ -1,10 +1,9 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-class selction
+class Selection
 {
 private:
-  /* data */
   int findMax()
   {
     int max = tab[0];
@@ -19,7 +18,17 @@ private:
   }
 
 public:
-  int tab[10] = {2, 3, 64, 5, 76, 98, 4, 0, 23, 1};
+  int tab[10];
+  void wypelnij()
+  {
+    for (int i = 0; i < 10; i++)
+    {
+      cout << "Podaj element " << i << endl;
+      int n;
+      cin >> n;
+      tab[i] = n;
+    }
+  }
   void sortowanie()
   {
     int temp;
@@ -54,10 +63,11 @@ public:
 
 int main()
 {
-  selction Selection;
-  Selection.sortowanie();
-  Selection.wypisz();
+  Selection selection;
+  selection.wypelnij();
+  selection.sortowanie();
+  selection.wypisz();
   cout << endl;
-  cout << Selection.getMax();
+  cout << selection.getMax();
   return 0;
 }

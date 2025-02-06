@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 void wylosuj(int *tab, int n)
 {
   srand(time(NULL));
@@ -17,7 +19,7 @@ void wypisz(int *tab, int n)
 }
 int ile()
 {
-  int n;
+  int n = 0;
   while (n > 10 || n < 3)
   {
     cout << "Ile kostek chcesz rzucic (3 - 10)" << endl;
@@ -25,6 +27,7 @@ int ile()
   }
   return n;
 }
+
 int points(int *tab, int n)
 {
   int suma = 0;
@@ -35,7 +38,7 @@ int points(int *tab, int n)
     for (int j = i + 1; j <= n; j++)
     {
 
-      if (tab[i] == tab[j]) // tab[i=2]=6 tab[j=4]=6
+      if (tab[i] == tab[j])
       {
         suma += tab[j];
         liczba = tab[i];
@@ -43,12 +46,11 @@ int points(int *tab, int n)
       }
     }
     suma += liczba;
-    cout << "suma po: " << i + 1 << " " << suma
-         << endl;
   }
-  cout << "liczba uzyskanych punktow: ";
+
   return suma;
 }
+
 bool jeszczeRaz()
 {
   char znak;
@@ -58,7 +60,6 @@ bool jeszczeRaz()
     cin >> znak;
     if (znak == 't')
     {
-      /* code */
       return true;
     }
 
@@ -69,15 +70,16 @@ bool jeszczeRaz()
 int main()
 {
   int tab[10];
-  wylosuj(tab, ile());
-  wypisz(tab, ile());
-  cout << points(tab, ile()) << endl;
-  // while (jeszczeRaz())
-  // {
-  //   wylosuj(tab, ile());
-  //   wypisz(tab, ile());
-  //   cout << points(tab, ile()) << endl;
-  // }
+  int ileRzutow = ile();
+  wylosuj(tab, ileRzutow);
+  wypisz(tab, ileRzutow);
+  cout << "Liczba uzyskanych punktów:" << points(tab, ileRzutow) << endl;
+  while (jeszczeRaz())
+  {
+    wylosuj(tab, ileRzutow);
+    wypisz(tab, ileRzutow);
+    cout << "Liczba uzyskanych punktów:" << points(tab, ileRzutow) << endl;
+  }
 
   return 0;
 }
