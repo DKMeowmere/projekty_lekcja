@@ -5,6 +5,9 @@
 		"iostream": "cpp",
 		"stdexcept": "cpp",
 		"ostream": "cpp",
-		"new": "cpp"
+		"new": "cpp",
+		"random": "cpp",
+		"optional": "cpp",
+		"variant": "cpp"
 	}
 }

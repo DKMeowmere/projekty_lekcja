@@ -38,8 +38,8 @@ int main()
     }
 
     try
-    {
-        throw MyLogicError("This is a logic error!");
+    { 
+         throw MyLogicError("This is a logic error!");
     }
 
     catch (const logic_error &e)

@@ -1,0 +1,5 @@
+C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\MyFirstProject\x64\Debug\MyFirstProject.vcxproj.AssemblyReference.cache
+C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\MyFirstProject\x64\Debug\MyFirstProject.MainForm.resources
+C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\MyFirstProject\x64\Debug\MyFirstProject.MainForm.dje.resources
+C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\MyFirstProject\x64\Debug\MyFirstProject.MainForm.yo-NG.resources
+C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\MyFirstProject\x64\Debug\MyFirstProject.vcxproj.GenerateResource.cache

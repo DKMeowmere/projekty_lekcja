@@ -1,0 +1,4 @@
+﻿  MainForm.cpp
+C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\MyFirstProject\MainForm.cpp(5,6): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  MainForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  MyFirstProject.vcxproj -> C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\x64\Debug\MyFirstProject.exe

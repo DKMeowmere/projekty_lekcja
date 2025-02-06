@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\x64\Debug\MyFirstProject.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls>
+    <SatelliteDll>
+      <FullPath>C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\MyFirstProject\x64\Debug\dje\MyFirstProject.resources.dll</FullPath>
+    </SatelliteDll>
+    <SatelliteDll>
+      <FullPath>C:\Users\Dawidos\Desktop\projekty\desktop\MyFirstProject\MyFirstProject\x64\Debug\yo-NG\MyFirstProject.resources.dll</FullPath>
+    </SatelliteDll>
+  </SatelliteDlls>
+  <NonRecipeFileRefs />
+</Project>

@@ -66,7 +66,7 @@ int main()
   }
   catch (...)
   {
-    cout << "podales  wieksza" << endl;
+    cout << "ekpodales  wisza" << endl;
   }
 
   return 0;

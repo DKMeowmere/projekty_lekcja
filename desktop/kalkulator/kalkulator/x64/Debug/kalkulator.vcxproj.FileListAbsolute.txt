@@ -1,0 +1,3 @@
+C:\Users\Dawidos\Desktop\projekty\desktop\kalkulator\kalkulator\x64\Debug\kalkulator.vcxproj.AssemblyReference.cache
+C:\Users\Dawidos\Desktop\projekty\desktop\kalkulator\kalkulator\x64\Debug\kalkulator.MyForm.resources
+C:\Users\Dawidos\Desktop\projekty\desktop\kalkulator\kalkulator\x64\Debug\kalkulator.vcxproj.GenerateResource.cache
