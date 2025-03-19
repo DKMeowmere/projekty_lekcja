@@ -12,7 +12,7 @@ void wypelnij(bool *tab, int n)
 
 void erastotenes(bool *tab, int n)
 {
-  for (int i = 2; i < sqrt(n); i++)
+  for (int i = 2; i <= sqrt(n); i++)
   {
     if (tab[i] == true)
     {
@@ -26,7 +26,7 @@ void erastotenes(bool *tab, int n)
 
 void wypisz(bool *tab, int n)
 {
-  for (int i = 0; i <= n; i++)
+  for (int i = 2; i <= n; i++)
   {
     if (tab[i] == true)
     {
