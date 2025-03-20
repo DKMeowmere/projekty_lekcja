@@ -159,7 +159,6 @@ namespace Srednia {
 			this->label1->Size = System::Drawing::Size(80, 13);
 			this->label1->TabIndex = 8;
 			this->label1->Text = L"Oceny uczniow";
-			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// button1
 			// 
@@ -227,14 +226,15 @@ namespace Srednia {
 
 		}
 #pragma endregion
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	double minSrednia = 6;
+	double maxSrednia = 0;
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		static int liczbaUczniow = 1;
 		const int MAX_UCZNIOW = 10;
 
 		if (liczbaUczniow > MAX_UCZNIOW) {
-			MessageBox::Show("Osiagnieto maksymalna liczbe uczniow!", "Blad", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("Osiagnieto maksymalna liczbe uczniow!");
 			return;
 		}
 
@@ -270,8 +270,6 @@ namespace Srednia {
 
 		label4->Text += "Uczen " + liczbaUczniow + " (" + imie + ") - Srednia: " + srednia.ToString("F2") + "\n";
 
-		static double minSrednia = srednia;
-		static double maxSrednia = srednia;
 
 		if (srednia < minSrednia) minSrednia = srednia;
 		if (srednia > maxSrednia) maxSrednia = srednia;

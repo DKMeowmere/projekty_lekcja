@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Paczka {
 
@@ -155,7 +155,7 @@ namespace Paczka {
 			this->radioButton1->Size = System::Drawing::Size(78, 17);
 			this->radioButton1->TabIndex = 0;
 			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Pocztówka";
+			this->radioButton1->Text = L"PocztÃ³wka";
 			this->radioButton1->UseVisualStyleBackColor = true;
 			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
 			// 
@@ -194,7 +194,6 @@ namespace Paczka {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(226, 20);
 			this->textBox1->TabIndex = 3;
-
 			// 
 			// label3
 			// 
@@ -229,7 +228,7 @@ namespace Paczka {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(232, 27);
 			this->button1->TabIndex = 3;
-			this->button1->Text = L"SprawdŸ Cenê";
+			this->button1->Text = L"SprawdÅº Cene";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -250,7 +249,7 @@ namespace Paczka {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(624, 30);
 			this->button2->TabIndex = 5;
-			this->button2->Text = L"ZatwierdŸ";
+			this->button2->Text = L"ZatwierdÅº";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -276,7 +275,7 @@ namespace Paczka {
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->pictureBox1);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Nadaj przesylke Numer zdajÄ…cego: 0000000000";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
@@ -311,17 +310,17 @@ void sprawdzKod() {
 		}
 	}
 	if (textBox2->TextLength != 5) {
-		String^ message = "Nieprawid³owa liczba cyfr w kodzie pocztowym";
-		String^ caption = "B³¹d";
+		String^ message = "Nieprawidlowa liczba cyfr w kodzie pocztowym";
+		String^ caption = "BlÄ…d";
 		MessageBox::Show(message, caption, MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 	else if (iloscbledow != 0) {
-		String^ message = "Kod pocztowy powinien siê sk³adaæ z samych cyfr";
-		String^ caption = "B³¹d";
+		String^ message = "Kod pocztowy powinien sie skladac z samych cyfr";
+		String^ caption = "BlÄ…d";
 		MessageBox::Show(message, caption, MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 	else {
-		label4->Text = "Dane przesy³ki zosta³y wprowadzone";
+		label4->Text = "Dane przesylki zostaly wprowadzone";
 	}
 	
 }
@@ -330,18 +329,18 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	if (radioButton1->Checked)
 	{
 		pictureBox1->Image = imageList1->Images[0];
-		Price->Text = "Cena: 1 z³";
+		Price->Text = "Cena: 1zl";
 	}
 	else if (radioButton2->Checked)
 	{
 		pictureBox1->Image = imageList1->Images[1];
-		Price->Text = "Cena: 1,5 z³";
+		Price->Text = "Cena: 1,5zl";
 
 	}
 	else if (radioButton3->Checked)
 	{
 		pictureBox1->Image = imageList1->Images[2];
-		Price->Text = "Cena: 10 z³";
+		Price->Text = "Cena: 10zl";
 	}
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {

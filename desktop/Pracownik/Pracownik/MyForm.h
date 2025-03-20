@@ -171,7 +171,7 @@ namespace Pracownik {
 			this->groupBox2->Size = System::Drawing::Size(262, 170);
 			this->groupBox2->TabIndex = 1;
 			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Generowane Has³a";
+			this->groupBox2->Text = L"Generowane Hasla";
 			// 
 			// button2
 			// 
@@ -279,6 +279,7 @@ namespace Pracownik {
 		String^ duze = "QWERTYUIOPASDFGHJKLZXCVBNM";
 		String^ cyfry = "0123456789";
 		String^ specjalne = "!@#$%^&*()-_=+";
+
 		while (haslo->Length < ile) {
 			haslo += male[los->Next(0, male->Length)];
 			if (haslo->Length == ile) MessageBox::Show(haslo);

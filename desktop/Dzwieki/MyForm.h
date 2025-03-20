@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Dzwieki {
 
@@ -202,7 +202,7 @@ namespace Dzwieki {
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
 			this->Name = L"MyForm";
-			this->Text = L"MojeDŸwieki Wykona³: 00000000000";
+			this->Text = L"Moje DÅºwieki WykonaÅ‚: 00000000000";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
