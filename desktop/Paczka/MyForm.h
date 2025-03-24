@@ -137,7 +137,6 @@ namespace Paczka {
 			this->radioButton3->TabIndex = 2;
 			this->radioButton3->Text = L"Paczka";
 			this->radioButton3->UseVisualStyleBackColor = true;
-			this->radioButton3->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton3_CheckedChanged);
 			// 
 			// radioButton2
 			// 
@@ -150,7 +149,6 @@ namespace Paczka {
 			this->radioButton2->TabStop = true;
 			this->radioButton2->Text = L"List";
 			this->radioButton2->UseVisualStyleBackColor = true;
-			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton2_CheckedChanged);
 			// 
 			// radioButton1
 			// 
@@ -164,7 +162,6 @@ namespace Paczka {
 			this->radioButton1->TabStop = true;
 			this->radioButton1->Text = L"Pocztówka";
 			this->radioButton1->UseVisualStyleBackColor = true;
-			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
 			// 
 			// groupBox2
 			// 
@@ -296,7 +293,6 @@ namespace Paczka {
 			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm";
 			this->Text = L"Nadaj przesylke Numer zdającego: 0000000000";
-			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -307,17 +303,6 @@ namespace Paczka {
 
 		}
 #pragma endregion
-	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		
-	}
-
-	
-private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-}
 
 void sprawdzKod() {
 	int iloscbledow = 0;

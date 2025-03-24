@@ -260,7 +260,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		kolorOczu = radioButton3->Text;
 	}
 
-	MessageBox::Show(textBox1->Text + " " + textBox2->Text + " kolor oczu " + kolorOczu);
+	MessageBox::Show(textBox2->Text + " " + textBox3->Text + " kolor oczu " + kolorOczu);
 }
 	private: System::Void textBox1_Leave(System::Object^ sender, System::EventArgs^ e) {
 		if(textBox1->Text == "111" || textBox1->Text == "000" ||  textBox1->Text == "333") {
