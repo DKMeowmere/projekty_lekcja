@@ -304,32 +304,6 @@ namespace Paczka {
 		}
 #pragma endregion
 
-void sprawdzKod() {
-	int iloscbledow = 0;
-	for (int i = 0; i < textBox2->TextLength; i++)
-	{
-		char znak = textBox2->Text[i];
-		if (Convert::ToInt16(znak) < 48 || Convert::ToInt16(znak) > 57)
-		{
-			iloscbledow++;
-		}
-	}
-	if (textBox2->TextLength != 5) {
-		String^ message = "Nieprawidlowa liczba cyfr w kodzie pocztowym";
-		String^ caption = "Bląd";
-		MessageBox::Show(message, caption, MessageBoxButtons::OK, MessageBoxIcon::Error);
-	}
-	else if (iloscbledow != 0) {
-		String^ message = "Kod pocztowy powinien sie skladac z samych cyfr";
-		String^ caption = "Bląd";
-		MessageBox::Show(message, caption, MessageBoxButtons::OK, MessageBoxIcon::Error);
-	}
-	else {
-		label4->Text = "Dane przesylki zostaly wprowadzone";
-	}
-	
-}
-
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (radioButton1->Checked)
 	{
@@ -349,7 +323,28 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	sprawdzKod();
+	int iloscbledow = 0;
+	for (int i = 0; i < textBox2->TextLength; i++)
+	{
+		char znak = textBox2->Text[i];
+		if (Convert::ToInt16(znak) < 48 || Convert::ToInt16(znak) > 57)
+		{
+			iloscbledow++;
+		}
+	}
+	if (textBox2->TextLength != 5) {
+		String^ message = "Nieprawidlowa liczba cyfr w kodzie pocztowym";
+		String^ caption = "Bląd";
+		MessageBox::Show(message);
+	}
+	else if (iloscbledow != 0) {
+		String^ message = "Kod pocztowy powinien sie skladac z samych cyfr";
+		String^ caption = "Bląd";
+		MessageBox::Show(message);
+	}
+	else {
+		label4->Text = "Dane przesylki zostaly wprowadzone";
+	}
 }
 };
 }
