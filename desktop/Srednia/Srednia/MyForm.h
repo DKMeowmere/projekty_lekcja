@@ -228,9 +228,9 @@ namespace Srednia {
 #pragma endregion
 	double minSrednia = 6;
 	double maxSrednia = 0;
+	int liczbaUczniow = 1;
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		static int liczbaUczniow = 1;
 		const int MAX_UCZNIOW = 10;
 
 		if (liczbaUczniow > MAX_UCZNIOW) {

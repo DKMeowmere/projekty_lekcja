@@ -24,7 +24,6 @@ int main()
     int i = 0;
     while (!plik.eof())
     {
-
       plik >> osoby[i].imie >> osoby[i].nazwisko >> osoby[i].wiek >> osoby[i].numberButa;
       i++;
     }
