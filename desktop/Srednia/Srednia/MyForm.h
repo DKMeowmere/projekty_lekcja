@@ -211,6 +211,7 @@ namespace Srednia {
 			this->Controls->Add(this->numericUpDown3);
 			this->Controls->Add(this->numericUpDown2);
 			this->Controls->Add(this->numericUpDown1);
+			this->MinimumSize = System::Drawing::Size(527, 525);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();

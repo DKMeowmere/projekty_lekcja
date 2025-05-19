@@ -95,11 +95,9 @@ namespace Pracownik {
 			this->groupBox1->Controls->Add(this->label3);
 			this->groupBox1->Controls->Add(this->label2);
 			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Location = System::Drawing::Point(95, 46);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Location = System::Drawing::Point(71, 37);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox1->Size = System::Drawing::Size(349, 209);
+			this->groupBox1->Size = System::Drawing::Size(262, 170);
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Dane pracownika";
@@ -112,55 +110,49 @@ namespace Pracownik {
 				L"Kierownik", L"Starszy Programista", L"M³odszy Programista",
 					L"Tester"
 			});
-			this->comboBox1->Location = System::Drawing::Point(165, 161);
-			this->comboBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->comboBox1->Location = System::Drawing::Point(124, 131);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(160, 24);
+			this->comboBox1->Size = System::Drawing::Size(121, 21);
 			this->comboBox1->TabIndex = 5;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(165, 112);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox2->Location = System::Drawing::Point(124, 91);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(160, 22);
+			this->textBox2->Size = System::Drawing::Size(121, 20);
 			this->textBox2->TabIndex = 4;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(165, 63);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox1->Location = System::Drawing::Point(124, 51);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(160, 22);
+			this->textBox1->Size = System::Drawing::Size(121, 20);
 			this->textBox1->TabIndex = 3;
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(45, 165);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(34, 134);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(76, 16);
+			this->label3->Size = System::Drawing::Size(62, 13);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Stanowisko";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(45, 116);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(34, 94);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(65, 16);
+			this->label2->Size = System::Drawing::Size(53, 13);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Nazwisko";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(45, 66);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(34, 54);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(32, 16);
+			this->label1->Size = System::Drawing::Size(26, 13);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Imie";
 			// 
@@ -172,11 +164,9 @@ namespace Pracownik {
 			this->groupBox2->Controls->Add(this->checkBox1);
 			this->groupBox2->Controls->Add(this->label4);
 			this->groupBox2->Controls->Add(this->textBox3);
-			this->groupBox2->Location = System::Drawing::Point(669, 46);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox2->Location = System::Drawing::Point(502, 37);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox2->Size = System::Drawing::Size(349, 209);
+			this->groupBox2->Size = System::Drawing::Size(262, 170);
 			this->groupBox2->TabIndex = 1;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Generowane Hasla";
@@ -185,10 +175,9 @@ namespace Pracownik {
 			// 
 			this->button2->BackColor = System::Drawing::Color::SteelBlue;
 			this->button2->ForeColor = System::Drawing::Color::White;
-			this->button2->Location = System::Drawing::Point(119, 181);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Location = System::Drawing::Point(89, 147);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(109, 28);
+			this->button2->Size = System::Drawing::Size(82, 23);
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"Generuj haslo";
 			this->button2->UseVisualStyleBackColor = false;
@@ -197,10 +186,9 @@ namespace Pracownik {
 			// checkBox3
 			// 
 			this->checkBox3->AutoSize = true;
-			this->checkBox3->Location = System::Drawing::Point(27, 130);
-			this->checkBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->checkBox3->Location = System::Drawing::Point(20, 106);
 			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(124, 20);
+			this->checkBox3->Size = System::Drawing::Size(101, 17);
 			this->checkBox3->TabIndex = 4;
 			this->checkBox3->Text = L"Znaki specjalne";
 			this->checkBox3->UseVisualStyleBackColor = true;
@@ -208,10 +196,9 @@ namespace Pracownik {
 			// checkBox2
 			// 
 			this->checkBox2->AutoSize = true;
-			this->checkBox2->Location = System::Drawing::Point(27, 102);
-			this->checkBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->checkBox2->Location = System::Drawing::Point(20, 83);
 			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(59, 20);
+			this->checkBox2->Size = System::Drawing::Size(49, 17);
 			this->checkBox2->TabIndex = 3;
 			this->checkBox2->Text = L"Cyfry";
 			this->checkBox2->UseVisualStyleBackColor = true;
@@ -221,10 +208,9 @@ namespace Pracownik {
 			this->checkBox1->AutoSize = true;
 			this->checkBox1->Checked = true;
 			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox1->Location = System::Drawing::Point(27, 74);
-			this->checkBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->checkBox1->Location = System::Drawing::Point(20, 60);
 			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(105, 20);
+			this->checkBox1->Size = System::Drawing::Size(85, 17);
 			this->checkBox1->TabIndex = 2;
 			this->checkBox1->Text = L"Wielkie litery";
 			this->checkBox1->UseVisualStyleBackColor = true;
@@ -232,19 +218,17 @@ namespace Pracownik {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(45, 38);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(34, 31);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(76, 16);
+			this->label4->Size = System::Drawing::Size(64, 13);
 			this->label4->TabIndex = 1;
 			this->label4->Text = L"Ile znakow\?";
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(169, 34);
-			this->textBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox3->Location = System::Drawing::Point(127, 28);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(132, 22);
+			this->textBox3->Size = System::Drawing::Size(100, 20);
 			this->textBox3->TabIndex = 0;
 			// 
 			// button1
@@ -252,10 +236,9 @@ namespace Pracownik {
 			this->button1->BackColor = System::Drawing::Color::SteelBlue;
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(456, 271);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Location = System::Drawing::Point(342, 220);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(211, 36);
+			this->button1->Size = System::Drawing::Size(158, 29);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Zatwierdz";
 			this->button1->UseVisualStyleBackColor = false;
@@ -263,14 +246,14 @@ namespace Pracownik {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightSteelBlue;
-			this->ClientSize = System::Drawing::Size(1097, 321);
+			this->ClientSize = System::Drawing::Size(823, 261);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->MinimumSize = System::Drawing::Size(839, 300);
 			this->Name = L"MyForm";
 			this->Text = L"Dodaj pracownika";
 			this->groupBox1->ResumeLayout(false);

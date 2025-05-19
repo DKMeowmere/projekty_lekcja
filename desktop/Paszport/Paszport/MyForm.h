@@ -226,6 +226,7 @@ namespace Paszport {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->MinimumSize = System::Drawing::Size(743, 330);
 			this->Name = L"MyForm";
 			this->Text = L"Wprowadzenie danych do paszportu. Wykonał:0000000000000";
 			this->groupBox1->ResumeLayout(false);

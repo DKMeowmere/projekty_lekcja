@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ZmieniajObrazki</string>
+    <string name="zmien_obrazek">Zmień obrazek</string>
+    <string name="obrazek">Wyświetlany obrazek</string>
+</resources>

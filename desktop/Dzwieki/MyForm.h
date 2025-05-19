@@ -201,6 +201,7 @@ namespace Dzwieki {
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
+			this->MinimumSize = System::Drawing::Size(1106, 317);
 			this->Name = L"MyForm";
 			this->Text = L"Moje Dźwieki Wykonał: 00000000000";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
