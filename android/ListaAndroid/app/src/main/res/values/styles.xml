@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.Koscy" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    </style>
+
+    <style name="Widget.App.Button.NoRadius" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.NoRadius</item>
+    </style>
+
+    <style name="ShapeAppearance.App.NoRadius" parent="">
+        <item name="cornerFamily">rounded</item> <item name="cornerSize">0dp</item>      </style>
+
+</resources>
