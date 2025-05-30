@@ -14,13 +14,13 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         val button = findViewById<Button>(R.id.button)
-        val lista=findViewById<ListView>(R.id.listView)
-        val sharedPref = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
-        val texts = sharedPref.getStringSet("TEXTS", setOf("Pusto"))
-        val array = listOf(texts)
+        val list = findViewById<ListView>(R.id.listView)
+        val prefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
+        val saved = prefs.getString("MESSAGES", "") ?: ""
+        val messagesList = saved.split("|||").filter { it.isNotBlank() }.toMutableList()
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, array)
-        lista.adapter=adapter
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, messagesList)
+        list.adapter=adapter
 
         button.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
