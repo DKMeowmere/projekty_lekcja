@@ -5,25 +5,47 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val editEmail = findViewById<EditText>(R.id.addText)
+        val textInput = findViewById<EditText>(R.id.addText)
         val button = findViewById<Button>(R.id.buttonAdd)
-        val texts = setOf("Pies2",
-            "Kot",
-            "Świnka morska")
+
+        val prefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
+        val isFirstRun = prefs.getBoolean("isFirstRun", true)
+
+        if (isFirstRun) {
+            if (prefs.contains("MESSAGES")) {
+                prefs.edit().remove("MESSAGES").apply()
+            }
+            prefs.edit().putBoolean("isFirstRun", false).apply()
+        }
+
 
         button.setOnClickListener {
-            val email = editEmail.text.toString()
+            val message = textInput.text.toString()
 
-            val intent = Intent(this, MainActivity2::class.java)
-            val sharedPref = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
-            sharedPref.edit().putStringSet("TEXTS", texts).apply()
-            startActivity(intent)
+            if (message.isNotBlank()) {
+                val saved = prefs.getString("MESSAGES", "") ?: ""
+                val currentList = saved.split("|||").filter { it.isNotBlank() }.toMutableList()
+
+                currentList.add(message)
+
+                if (currentList.size > 10) {
+                    currentList.removeAt(0)
+                }
+
+                val updated = currentList.joinToString("|||")
+                prefs.edit().putString("MESSAGES", updated).apply()
+                val intent = Intent(this, MainActivity2::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Wpisz coś", Toast.LENGTH_SHORT).show()
+            }
         }
 
     }
