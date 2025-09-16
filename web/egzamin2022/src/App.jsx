@@ -26,24 +26,30 @@ function App() {
 					return <li key={index}>{kurs}</li>
 				})}
 			</ol>
-			<label htmlFor="name">Imię i nazwisko:</label>
-			<input
-				id="name"
-				type="text"
-				value={nazwa}
-				onChange={e => setNazwa(e.target.value)}
-			/>
-			<br />
 			<form>
-				<label htmlFor="number">Numer kursu:</label>
-				<input
-					id="number"
-					type="number"
-					value={numer}
-					onChange={e => setNumer(e.target.value)}
-				/>
+				<div className="form-group">
+					<label htmlFor="name">Imię i nazwisko:</label>
+					<input
+						className="form-control"
+						id="name"
+						type="text"
+						value={nazwa}
+						onChange={e => setNazwa(e.target.value)}
+					/>
+				</div>
 				<br />
-				<button type="submit" onClick={handleSubmit}>
+				<div className="form-group">
+					<label htmlFor="number">Numer kursu:</label>
+					<input
+						className="form-control"
+						id="number"
+						type="number"
+						value={numer}
+						onChange={e => setNumer(e.target.value)}
+					/>
+				</div>
+				<br />
+				<button type="submit" onClick={handleSubmit} className="btn btn-primary">
 					Zapisz do kursu
 				</button>
 			</form>
