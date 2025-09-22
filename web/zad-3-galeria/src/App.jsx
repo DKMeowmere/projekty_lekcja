@@ -114,22 +114,48 @@ function App() {
 					</label>
 				</div>
 			</form>
-			{images.map(image => {
-				if (image.category === 1 && !isFlowersActive) return null
-				if (image.category === 2 && !isAnimalsActive) return null
-				if (image.category === 3 && !isCarsActive) return null
-				return (
-					<>
-						<img
-							style={{ borderRadius: "8px", margin: "10px" }}
+			<div style={{ display: "flex", flexWrap: "wrap", flexDirection: "row" }}>
+				{images.map(image => {
+					if (image.category === 1 && !isFlowersActive) return null
+					if (image.category === 2 && !isAnimalsActive) return null
+					if (image.category === 3 && !isCarsActive) return null
+					return (
+						<div
 							key={image.id}
-							src={`/src/assets/${image.filename}`}
-							alt={image.alt}
-						/>
-						<button className="btn btn-success" onClick={() => setImages(images.map())}>Pobierz</button>
-					</>
-				)
-			})}
+							style={{
+								display: "flex",
+								flexDirection: "column",
+								alignItems: "start",
+							}}
+						>
+							<img
+								style={{ borderRadius: "8px", margin: "10px" }}
+								src={`/src/assets/${image.filename}`}
+								alt={image.alt}
+							/>
+							<h4>Pobrań: {image.downloads}</h4>
+							<button
+								className="btn btn-success"
+								onClick={() =>
+									setImages(
+										images.map(currentImg => {
+											if (currentImg.id === image.id) {
+												return {
+													...currentImg,
+													downloads: currentImg.downloads + 1,
+												}
+											}
+											return currentImg
+										})
+									)
+								}
+							>
+								Pobierz
+							</button>
+						</div>
+					)
+				})}
+			</div>
 		</>
 	)
 }
