@@ -126,10 +126,11 @@ function App() {
 								display: "flex",
 								flexDirection: "column",
 								alignItems: "start",
+								margin: "10px",
 							}}
 						>
 							<img
-								style={{ borderRadius: "8px", margin: "10px" }}
+								style={{ borderRadius: "8px" }}
 								src={`/src/assets/${image.filename}`}
 								alt={image.alt}
 							/>
