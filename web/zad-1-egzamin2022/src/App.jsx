@@ -49,7 +49,11 @@ function App() {
 					/>
 				</div>
 				<br />
-				<button type="submit" onClick={handleSubmit} className="btn btn-primary">
+				<button
+					type="submit"
+					onClick={handleSubmit}
+					className="btn btn-primary"
+				>
 					Zapisz do kursu
 				</button>
 			</form>

@@ -1,0 +1,5 @@
+Informacje
+System operacyjny: Windows 11 Pro Education
+Środowiska programistyczne: Chrome, Visual Studio Code, Vite
+Języki programowania: Javascript, React, Bootstrap
+Komentarz: brak
