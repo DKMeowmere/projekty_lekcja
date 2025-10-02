@@ -16,8 +16,14 @@ function App() {
 	}
 
 	return (
-		<>
-			<h1>User's List</h1>
+		<div
+			style={{
+				maxWidth: 400,
+				margin: "auto",
+				padding: "1rem",
+			}}
+		>
+			<h1 style={{color: '#00008b'}}>User's List</h1>
 			<div className="input-group">
 				<input
 					type="text"
@@ -36,7 +42,7 @@ function App() {
 					<li
 						key={user.id}
 						className="list-group-item"
-						style={{ position: "relative" }}
+						style={{ position: "relative" , backgroundColor: '##b3e6ff', borderRadius: '5px', marginBottom: '5px'}}
 					>
 						{user.name}
 						<span
@@ -54,7 +60,7 @@ function App() {
 					</li>
 				))}
 			</ul>
-		</>
+		</div>
 	)
 }
 
