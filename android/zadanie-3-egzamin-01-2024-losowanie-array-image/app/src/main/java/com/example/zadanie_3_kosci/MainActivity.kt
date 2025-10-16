@@ -28,16 +28,28 @@ class MainActivity : AppCompatActivity() {
 
         startBtn.setOnClickListener {
             var currentResult = 0;
+            val currentList: MutableList<Int> = mutableListOf()
 
             for(i in imagesId.indices) {
                 val randomInt = (0..5).random()
-
+                currentList.add(randomInt+1)
                 val imageView = findViewById<ImageView>(imagesId[i])
                 imageView.setImageResource(images[randomInt])
-                currentResult+=randomInt+1
-                result+=randomInt+1
             }
 
+            for(i in 1..6){
+                var digitCount = 0
+
+                for (j in currentList){
+                    if(i == j){
+                        digitCount++
+                    }
+                }
+
+                if(digitCount > 1) currentResult+=digitCount * i
+            }
+
+            result+=currentResult
             currentResultTextView.text = "Wynik tego losowania: $currentResult"
             gameResultTextView.text = "Wynik gry: $result"
         }
@@ -53,11 +65,6 @@ class MainActivity : AppCompatActivity() {
                 imageView.setImageResource(R.drawable.question)
             }
         }
-
-//        dla array
-//        for (owoc in lista) {
-//            println(owoc)
-//        }
 
     }
 }
