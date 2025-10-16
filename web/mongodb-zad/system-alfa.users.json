@@ -1,0 +1,161 @@
+[{
+  "_id": {
+    "$oid": "68da567cefe6e582e83e7b0d"
+  },
+  "firstName": "Marian",
+  "lastName": "Drągalski",
+  "isActive": true,
+  "hobby": [
+    "wspinanie",
+    "rower",
+    "karate",
+    "gotowanie"
+  ],
+  "created_at": {
+    "$date": "2021-07-01T00:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2021-07-01T00:00:00.000Z"
+  },
+  "references": [
+    {
+      "user_id": 108,
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit deserunt, omnis quo amet dolore nihil atque. Recusandae voluptatem deleniti atque"
+    },
+    {
+      "user_id": 110,
+      "content": "Sit amet consectetur adipisicing elit. Impedit deserunt, omnis quo amet dolore nihil atque."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68da567cefe6e582e83e7b0e"
+  },
+  "firstName": "Anna",
+  "lastName": "Kowalska",
+  "isActive": false,
+  "hobby": [
+    "czytanie",
+    "jazda konna"
+  ],
+  "created_at": {
+    "$date": "2021-06-15T00:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2021-06-20T00:00:00.000Z"
+  },
+  "references": []
+},
+{
+  "_id": {
+    "$oid": "68da567cefe6e582e83e7b0f"
+  },
+  "firstName": "Jan",
+  "lastName": "Nowak",
+  "isActive": true,
+  "hobby": [
+    "programowanie",
+    "szachy"
+  ],
+  "created_at": {
+    "$date": "2021-05-01T00:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2021-05-01T00:00:00.000Z"
+  },
+  "references": []
+},
+{
+  "_id": {
+    "$oid": "68da567cefe6e582e83e7b10"
+  },
+  "firstName": "Ewa",
+  "lastName": "Wiśniewska",
+  "isActive": false,
+  "hobby": [
+    "gotowanie"
+  ],
+  "created_at": {
+    "$date": "2021-04-10T00:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2021-04-12T00:00:00.000Z"
+  },
+  "references": []
+},
+{
+  "_id": {
+    "$oid": "68da567cefe6e582e83e7b11"
+  },
+  "firstName": "Krzysztof",
+  "lastName": "Adamski",
+  "isActive": true,
+  "hobby": [
+    "pływanie",
+    "bieganie"
+  ],
+  "created_at": {
+    "$date": "2021-03-22T00:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2021-03-23T00:00:00.000Z"
+  },
+  "references": []
+},
+{
+  "_id": {
+    "$oid": "68da567cefe6e582e83e7b12"
+  },
+  "firstName": "Agnieszka",
+  "lastName": "Zielińska",
+  "isActive": true,
+  "hobby": [
+    "fotografia",
+    "podróże"
+  ],
+  "created_at": {
+    "$date": "2021-02-11T00:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2021-02-12T00:00:00.000Z"
+  },
+  "references": []
+},
+{
+  "_id": {
+    "$oid": "68da567cefe6e582e83e7b13"
+  },
+  "firstName": "Tomasz",
+  "lastName": "Lewandowski",
+  "isActive": false,
+  "hobby": [
+    "muzyka"
+  ],
+  "created_at": {
+    "$date": "2021-01-30T00:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2021-02-01T00:00:00.000Z"
+  },
+  "references": []
+},
+{
+  "_id": {
+    "$oid": "68da567cefe6e582e83e7b14"
+  },
+  "firstName": "Magda",
+  "lastName": "Mazur",
+  "isActive": true,
+  "hobby": [
+    "malowanie",
+    "czytanie"
+  ],
+  "created_at": {
+    "$date": "2021-01-01T00:00:00.000Z"
+  },
+  "updated_at": {
+    "$date": "2021-01-02T00:00:00.000Z"
+  },
+  "references": []
+}]

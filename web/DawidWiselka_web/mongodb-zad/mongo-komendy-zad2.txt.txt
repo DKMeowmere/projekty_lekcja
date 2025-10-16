@@ -1,0 +1,4 @@
+1. db.books.countDocuments({ pageCount: { $gt: 525 } })
+2. db.books.countDocuments({ publishedDate: { $gt: new ISODate("2000-12-31T23:59:59Z") } })
+3. db.books.find({ categories: "PowerBuilder" })
+4. db.books.find({ pageCount: { $gt: 500 } })
