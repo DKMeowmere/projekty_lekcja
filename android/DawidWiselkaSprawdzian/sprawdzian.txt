@@ -1,0 +1,44 @@
+Elementy aplikacji:
+
+‒ Napis (etykieta) z tytułem gry: „Gra w kwiatki".
+‒ cztery obrazy (obok siebie w stanie początkowym wypełnione pytajnikiem
+‒ Napis „Wynik tego losowania: ”
+
+‒ Napis „Wynik gry: ”
+‒ Przycisk o treści „losuj”
+
+‒ Napis (etykieta) z tytułem gry: „Gra w kwiatki".
+‒ cztery obrazy (obok siebie w stanie początkowym wypełnione pytajnikiem
+‒ Napis „Wynik tego losowania: 
+
+
+‒ Rozmieszczenie elementów jak wyzej
+
+
+Działanie aplikacji:
+
+‒ Po wciśnięciu przycisku „losuj”:
+‒ Losowane sa 4 liczby z zakresu od 1 do 4, które są wyświetlone w postaci czterech obrazów kwiatow
+‒ Obliczane sa punkty zgodnie z ponizszym:
+1pkt- tylko jedno powtorzenie (para)
+2pkt-2 pary
+3pkt-trojka
+4pkt-kareta
+-wynik tego losowania to liczba pkt.
+‒ Wynik gry : "top won","bottom won", "draw".
+Na 6 blokowanie kwaiatkow i drugie losowanie (checkbox)
+
+W edytorze tekstu pakietu biurowego utwórz plik z dokumentacją i nazwij go egzamin. Dokument powinien
+zawierać informacje:
+‒ Nazwę systemu operacyjnego, na którym pracował zdający
+‒ Nazwy środowisk programistycznych, z których zdający korzystał na egzaminie
+‒ Nazwę emulatora dla aplikacji mobilnej
+‒ Nazwy użytych języków programowania
+Zrzuty ekranu i dokument umieść w podfolderze dokumentacja.
+
+Wykonaj zrzuty ekranu dokumentujące uruchomienie aplikacji utworzonych podczas egzaminu. Zrzuty
+powinny obejmować cały obszar ekranu monitora z widocznym paskiem zadań. Jeżeli aplikacja uruchamia
+się, na zrzucie należy umieścić okno z wynikiem działania programu oraz otwarte środowisko
+programistyczne z projektem lub okno terminala z kompilacją projektu. Jeżeli aplikacja nie uruchamia się
+z powodu błędów kompilacji, należy na zrzucie umieścić okno ze spisem błędów i widocznym otwartym
+środowiskiem programistycznym. Wykonać należy tyle zrzutów, ile interakcji podejmuje aplikacji.

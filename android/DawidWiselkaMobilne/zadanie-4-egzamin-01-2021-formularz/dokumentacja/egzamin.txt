@@ -1,0 +1,6 @@
+Informacje
+System operacyjny: Windows 11 Pro Education
+Emulator aplikacji mobilnej: Medium Phone API 36.1, Android 16 (Baklava)
+Środowiska programistyczne: Android Studio
+Języki programowania: Kotlin
+Komentarz: brak
