@@ -1,0 +1,6 @@
+Informacje 
+System operacyjny: Windows 11 Pro Education
+Nazwy środowisk programistycznych: Visual Studio Community 2022
+Nazwy języków programowania: C++ (C++/CLI, Windows Forms)
+Framework: .NET Framework
+Komentarz: brak
