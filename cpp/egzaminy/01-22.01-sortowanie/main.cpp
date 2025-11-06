@@ -1,24 +1,18 @@
 #include <iostream>
 using namespace std;
 
-
-# ******
-# Klasa:    Notatka
-# Opis:     Klasa reprezentująca notatki. Każda notatka ma swój tytuł i opis.
-# Pola:     __id - unikalny identyfikator notatki
-#           _tytul - tytuł notatki
-#           _tresc - treść notatki
-#           __liczba_notatek - statyczne pole informujące o liczbie utworzonych notatek;
-#                              nowe notatki otrzymują __id równy temu polu (po jego inkrementacji)
-# Autor:    961009xxxxx
-# ******
-
 class Tablica
 {
 private:
   int size = 10;
   int nums[10];
 
+  // **
+  // nazwa funkcji: findMax
+  // opis funkcji: szuka maksymalna wartość
+  // parametry: brak
+  // zwracany typ i opis: int - zwraca maksymalna wartość z tablicy
+  // **
   int findMax()
   {
     int max = nums[0];
@@ -33,6 +27,12 @@ private:
   }
 
 public:
+  // **
+  // nazwa funkcji: sort
+  // opis funkcji: sortuje całą tablice
+  // parametry: brak
+  // zwracany typ i opis: void - nic nie zwraca
+  // **
   void sort()
   {
 
@@ -56,7 +56,7 @@ public:
   {
     for (int i = 0; i < 10; i++)
     {
-      cout << "Podaj element " << i << endl;
+      cout << "Podaj element " << i + 1 << endl;
       int n;
       cin >> n;
       nums[i] = n;
