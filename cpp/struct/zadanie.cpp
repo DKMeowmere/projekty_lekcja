@@ -55,7 +55,7 @@ int main()
   jednostki.cysterny = 0;
 
   oblicz(jednostki, wartosc);
-  wypisz(jedno stki);
+  wypisz(jednostki);
 
   return 0;
 }
