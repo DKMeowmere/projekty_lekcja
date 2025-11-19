@@ -55,7 +55,9 @@ public:
 
 int main()
 {
-  string tekst = "Abba;;;to zespół Ó";
+  string tekst;
+  cout << "Podaj tekst do analizy:" << endl;
+  getline(cin, tekst);
 
   cout << tekst << endl;
   cout << "Liczba samoglosek: " << Tekst::policzSamogloski(tekst) << endl;

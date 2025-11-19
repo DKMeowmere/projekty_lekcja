@@ -6,6 +6,10 @@ string szyfruj(string tekst, int klucz)
 {
   string alfabet = "abcdefghijklmnopqrstuvwxyz";
   string szyfrowanyTekst = "";
+  cout << "Oryginalny klucz: " << klucz << endl;
+  cout << "Długość alfabetu: " << alfabet.length() << endl;
+  // klucz = (klucz) % alfabet.length();
+  cout << "Zmodyfikowany klucz: " << klucz << endl;
 
   for (int i = 0; i < tekst.length(); i++)
   {
@@ -28,6 +32,7 @@ string szyfruj(string tekst, int klucz)
       index -= alfabet.length();
     }
 
+
     szyfrowanyTekst += alfabet[index];
   }
 
@@ -43,6 +48,5 @@ int main()
   cout << "Podaj klucz szyfrowania (liczba całkowita):" << endl;
   cin >> klucz;
   cout << szyfruj(napis, klucz) << endl;
-
   return 0;
 }
