@@ -71,7 +71,7 @@ function App() {
 		<>
 			<h1>Kategorie zdjęć</h1>
 			<form>
-				<div className="form-check  form-switch form-check-inline">
+				<div className="form-check form-switch form-check-inline">
 					<input
 						type="checkbox"
 						className="form-check-input"
