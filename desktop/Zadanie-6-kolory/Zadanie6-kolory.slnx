@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Zadanie6-kolory/Zadanie6-kolory.vcxproj" />
+</Solution>
