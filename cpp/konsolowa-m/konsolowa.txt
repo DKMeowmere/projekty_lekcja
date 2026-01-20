@@ -1,0 +1,5 @@
+Informacje
+System operacyjny: Windows 11 Pro Education
+Nazwy środowisk programistycznych: Visual Studio Code
+Nazwy języków programowania: C++
+Komentarz: brak
